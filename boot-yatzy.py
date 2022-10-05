@@ -269,7 +269,7 @@ def ok_choose(turn,score_player1,score_player2,dices_player1,dices_player2,optio
                 score_player1[11]=yatzy(dices_player1)
                 options_player1.remove("yatzy")
             if values["choose1"]=="sum":
-                score_player1[12]=sum(dices_player1)
+                score_player1[12]=sum(row[0] for row in dices_player1)
                 options_player1.remove("sum")
             if values["choose1"]=="second yatzy":
                 if score_player1!=0:
@@ -313,7 +313,7 @@ def ok_choose(turn,score_player1,score_player2,dices_player1,dices_player2,optio
                 score_player2[11]=yatzy(dices_player2)
                 options_player2.remove("yatzy")
             if values["choose2"]=="sum":
-                score_player2[12]=sum(dices_player2)
+                score_player2[12]=sum(row[0] for row in dices_player2)
                 options_player2.remove("sum")
             if values["choose1"]=="second yatzy":
                 if score_player2!=0:
